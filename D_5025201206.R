@@ -68,27 +68,22 @@ nilai_kritikal
 # SOAL 4
 print("hasil dari point A ")
 file_data <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"))
-dim(file_data)
-head(file_data)
 attach(file_data)
-
-file_data$V1 <- as.factor(file_data$V1)
-file_data$V1 <- factor(file_data$V1,
+file_data$Jenis <- as.factor(file_data$Jenis)
+file_data$Jenis <- factor(file_data$Jenis,
                        labels = c("kucing oren",
                                   "kucing hitam",
-                                  "kucing putih",
-                                  "kucing oren"))
-class(file_data$V1)
+                                  "kucing putih"))
+class(file_data$Jenis)
 
-grup1 <- subset(file_data, V1 == "kucing oren")
-grup2 <- subset(file_data, V1 == "kucing hitam")
-grup3 <- subset(file_data, V1 == "kucing putih")
+grup1 <- subset(file_data, Jenis == "kucing oren")
+grup2 <- subset(file_data, Jenis == "kucing hitam")
+grup3 <- subset(file_data, Jenis == "kucing putih")
 
 file_data
 grup1
 grup2
 grup3
-# =====================================================
 
 # SOAL 5
 
